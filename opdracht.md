@@ -1,0 +1,55 @@
+# Voortgang website Yuri Radomisli
+
+## Voltooide taken
+- Base template aangepast naar Nederlands en informatie voor massagepraktijk
+- Contact pagina vertaald naar Nederlands en aangepast voor massagepraktijk
+- About pagina vertaald naar Nederlands en aangepast voor massagepraktijk 
+- Services pagina vertaald naar Nederlands en aangepast met massagebehandelingen en prijzen
+- Homepage aangepast naar Nederlands en voor massagepraktijk met:
+  - Hero sectie met professionele uitstraling
+  - Diensten overzicht
+  - Afspraken sectie
+  - Foto galerij
+  - Prijslijst
+  - Over mij sectie
+- SEO optimalisatie uitgevoerd:
+  - Meta description toegevoegd
+  - Keywords toegevoegd
+  - Open Graph tags toegevoegd voor social media
+  - Twitter cards toegevoegd
+  - Canonical URLs toegevoegd
+
+## Nog te doen
+- Afbeeldingen toevoegen voor massagepraktijk in static/images:
+  - massage-hero.jpg - Hero sectie foto (1920x1080px)
+  - sports-massage.jpg - Sportmassage foto (800x600px)
+  - massage-room.jpg - Praktijkruimte foto (800x600px)
+  - yuri-profile.jpg - Portretfoto Yuri (400x400px)
+  - Minimaal 4 behandeling foto's voor galerij (800x600px)
+- SEO optimalisatie voor massagepraktijk:
+  - Meta tags toevoegen
+  - Alt teksten voor afbeeldingen
+  - Sitemap genereren
+  - robots.txt aanmaken
+- Favicon en logo toevoegen:
+  - Logo ontwerpen in huisstijl
+  - Favicon genereren van logo
+- Contactgegevens en openingstijden updaten:
+  - Adres praktijk
+  - Telefoonnummer
+  - E-mailadres
+  - Website URL
+  - Openingstijden
+- Domein radomisli.nl koppelen:
+  - Domein registreren
+  - DNS instellingen configureren
+  - SSL certificaat installeren
+- Google Analytics toevoegen:
+  - Account aanmaken
+  - Tracking code implementeren
+- Cookie melding toevoegen:
+  - Cookie banner ontwerpen
+  - Cookie policy schrijven
+- Privacyverklaring toevoegen:
+  - Tekst schrijven
+  - Pagina aanmaken 

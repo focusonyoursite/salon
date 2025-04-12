@@ -1,66 +1,75 @@
 {% load static %}
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
-    <title>KHARSA STYLE BARBERSHOP UG</title>
+    <title>Yuri Radomisli - Massagetherapie</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professionele massagetherapie in Amsterdam door Yuri Radomisli. Sportmassage, ontspanningsmassage, therapeutische massage en hotstone massage. Maak direct een afspraak.">
+    <meta name="keywords" content="massagetherapie, massage, sportmassage, ontspanningsmassage, therapeutische massage, hotstone massage, Amsterdam, Yuri Radomisli">
+    <meta name="author" content="Yuri Radomisli">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yuri Radomisli - Massagetherapie">
+    <meta property="og:description" content="Professionele massagetherapie in Amsterdam. Sportmassage, ontspanningsmassage, therapeutische massage en hotstone massage. Maak direct een afspraak.">
+    <meta property="og:image" content="{% static 'images/massage-hero.jpg' %}">
+    <meta property="og:url" content="https://radomisli.nl">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yuri Radomisli - Massagetherapie">
+    <meta name="twitter:description" content="Professionele massagetherapie in Amsterdam. Sportmassage, ontspanningsmassage, therapeutische massage en hotstone massage.">
+    <meta name="twitter:image" content="{% static 'images/massage-hero.jpg' %}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://radomisli.nl{{ request.path }}">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
 
-    <!--FAVICON start-->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ salon_data.web_icon.url }}" type="image/x-icon">
-    <!--FAVICON start-->
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-	
-    
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
-
     <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
-
-    
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
-
-	
-	{% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-	{% endblock css %}
-		
-
+    {% block css %}{% endblock css %}
   </head>
   <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	  <div class="container">
-		<a class="navbar-brand" href="/" style="margin-left: -66px;"><span class=""></span>{{salon_data.owner.name}} UG</a>
+		<a class="navbar-brand" href="/" style="margin-left: -66px;"><span class=""></span>Yuri Radomisli</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="oi oi-menu"></span> Menu
 		</button>
 
 		<div class="collapse navbar-collapse" id="ftco-nav">
 		  <ul class="navbar-nav ml-auto">
-			  <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="/" class="nav-link">Startseite</a></li>
-        <li class="nav-item {% if request.path == '/#price' %}active{% endif %}"><a href="/#price" class="nav-link">Dienstleistungen</a></li>
-        <li class="nav-item {% if request.path == '/#gallery' %}active{% endif %}"><a href="/#gallery" class="nav-link">Galerie</a></li>
-        <li class="nav-item {% if request.path == '/#appointments' %}active{% endif %}"><a href="/#appointments" class="nav-link">Termine</a></li>
-        <li class="nav-item {% if request.path == '/#barber' %}active{% endif %}"><a href="/#barber" class="nav-link">Über uns</a></li>
-        <li class="nav-item {% if request.path == 'contact:contact' %}active{% endif %}"><a href="{% url 'contact:contact' %}" class="nav-link">Kontakt</a></li>
+			  <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item {% if request.path == '/#price' %}active{% endif %}"><a href="/#price" class="nav-link">Behandelingen</a></li>
+        <li class="nav-item {% if request.path == '/#gallery' %}active{% endif %}"><a href="/#gallery" class="nav-link">Foto's</a></li>
+        <li class="nav-item {% if request.path == '/#appointments' %}active{% endif %}"><a href="/#appointments" class="nav-link">Afspraken</a></li>
+        <li class="nav-item {% if request.path == '/#about' %}active{% endif %}"><a href="/#about" class="nav-link">Over mij</a></li>
+        <li class="nav-item {% if request.path == 'contact:contact' %}active{% endif %}"><a href="{% url 'contact:contact' %}" class="nav-link">Contact</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -78,7 +87,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="reviewModalLabel">Füge Dein Bewertung Ein</h5>
+        <h5 class="modal-title" id="reviewModalLabel">Schrijf een review</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -112,7 +121,7 @@
               <div class="form-group">
                 <label for="id_barber">Friseur</label>
                 <select name="barber" class="form-control" id="id_barber">
-                  <option value="" selected>Friseur auswählen</option>
+                  <option value="" selected>Friseur uitkiezen</option>
                   {% for barber in barber_list  %}
                     <option value="{{ barber.id }}">{{ barber.name }}</option>
                   {% endfor %}
@@ -121,25 +130,25 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="id_customer_name">Kundenname</label>
+                <label for="id_customer_name">Naam</label>
                 <input type="text" name="customer_name" class="form-control" id="id_customer_name">
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="id_email">Email</label>
+                <label for="id_email">E-mail</label>
                 <input type="email" name="email" class="form-control" id="id_email" required>
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="id_comment">Kommentar</label>
+                <label for="id_comment">Bericht</label>
                 <textarea name="comment" class="form-control" id="id_comment"></textarea>
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="id_rating">Bewertung</label>
+                <label for="id_rating">Beoordeling</label>
                 <div class="star-rating" onclick="updateRating()">
                   <input type="radio" name="rating" value="5" id="star-5"><label for="star-5">&#9733;</label>
                   <input type="radio" name="rating" value="4" id="star-4"><label for="star-4">&#9733;</label>
@@ -152,7 +161,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary rounded-pill mt-3" id="submitReviewBtn">Bewertung Einfügen</button>
+          <button type="submit" class="btn btn-primary rounded-pill mt-3" id="submitReviewBtn">Review plaatsen</button>
         </form>
       </div>
     </div>
@@ -168,7 +177,7 @@
       <div class="col-md-6 col-lg-7 py-5 pl-md-5">
         <div class="row">
           <div class="col-md-6">
-              <button type="button" class="btn btn-primary rounded-pill mt-3" data-toggle="modal" data-target="#reviewModal">Bewertung Einfügen</button>
+              <button type="button" class="btn btn-primary rounded-pill mt-3" data-toggle="modal" data-target="#reviewModal">Review plaatsen</button>
           </div>
         </div>
         {% if messages %}
@@ -183,8 +192,8 @@
         <div id="review-messages" style="margin-top: 10px;"></div>
         <div class="py-md-5" id="all-reviews">
           <div class="heading-section ftco-animate">
-            <span class="subheading">Testimonium</span>
-            <h2 class="mb-0">Zufriedene Kunden</h2>
+            <span class="subheading">Reviews</span>
+            <h2 class="mb-0">Tevreden klanten</h2>
           </div>
           {% include "include/reviews.html" %}
         </div>
@@ -251,7 +260,7 @@
             },
             error: function(xhr, status, error) {
                 console.error('Error submitting review form:', xhr.responseText);
-                alert('An error occurred. Please try again later.');
+                alert('Er is een fout opgetreden. Probeer het later opnieuw.');
             }
         });
     });    
@@ -263,18 +272,6 @@
     });
 });
 </script>
-
-
-<style>
-  .ftco-nav {
-    transition: height 0.3s ease;
-    overflow: hidden;
-  }
-
-  .show {
-    height: auto !important;
-  }
-</style>
 
 
     <footer class="ftco-footer ftco-section">
@@ -304,11 +301,11 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li class="nav-item active"><a href="/" class="nav-link">Startseite</a></li>
-                <li class="nav-item"><a href="/#price" class="nav-link">Dienstleistungen</a></li>
-                <li class="nav-item"><a href="/#gallery" class="nav-link">Galerie</a></li>
-                <li class="nav-item"><a href="/#barber" class="nav-link">Über uns</a></li>
-                <li class="nav-item"><a href="{% url 'contact:contact' %}" class="nav-link">Kontakt</a></li>
+                <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/#price" class="nav-link">Behandelingen</a></li>
+                <li class="nav-item"><a href="/#gallery" class="nav-link">Foto's</a></li>
+                <li class="nav-item"><a href="/#about" class="nav-link">Over mij</a></li>
+                <li class="nav-item"><a href="{% url 'contact:contact' %}" class="nav-link">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -318,7 +315,7 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">{{salon_data.owner.address}}</span></li>
-                  <li><span class="icon icon-clock-o"></span><span class="text">{{ salon_data.owner.work_days }} von {{ salon_data.owner.opening_time|time:'H:i' }} bis {{ salon_data.owner.closing_time|time:'H:i' }} Sonntag: Geschloßen</span></li>
+                  <li><span class="icon icon-clock-o"></span><span class="text">{{ salon_data.owner.work_days }} van {{ salon_data.owner.opening_time|time:'H:i' }} tot {{ salon_data.owner.closing_time|time:'H:i' }} Zondag: Gesloten</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">{{salon_data.owner.phone}}</span></a></li>
 	                <li><a href="{% url 'contact:contact' %}"><span class="icon icon-envelope"></span><span class="text">{{salon_data.owner.email}}</span></a></li>
                   <li><a href="{{ salon_data.owner.website }}"><span class="icon icon-link"></span><span class="text">{{ salon_data.owner.website }}</span></a></li>

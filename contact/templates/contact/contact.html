@@ -24,8 +24,8 @@
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate pb-5 text-center">
-                    <h2 class="mb-0 bread">Kontaktieren Sie uns</h2>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Startseite <i class="ion-ios-arrow-round-forward"></i></a></span> <span>Kontakt<i class="ion-ios-arrow-round-forward"></i></span></p>
+                    <h2 class="mb-0 bread">Neem contact op</h2>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home <i class="ion-ios-arrow-round-forward"></i></a></span> <span>Contact<i class="ion-ios-arrow-round-forward"></i></span></p>
                 </div>
             </div>
         </div>
@@ -40,9 +40,9 @@
                         <div id="popup-message" class="alert alert-success" style="display: none;">
                             <section class="success-message">
                                 <div class="container">
-                                    <h2> {{message.name}} Ihre Nachricht wurde erfolgreich gesendet!</h2>
-                                    <p>Wir haben Ihre Nachricht erhalten und werden uns so schnell wie möglich bei Ihnen melden.</p>
-                                    <p>Vielen Dank, dass Sie uns kontaktiert haben!</p>
+                                    <h2>{{message.name}}, je bericht is succesvol verzonden!</h2>
+                                    <p>We hebben je bericht ontvangen en nemen zo snel mogelijk contact met je op.</p>
+                                    <p>Bedankt voor je bericht!</p>
                                 </div>
                             </section>
                         </div>
@@ -51,8 +51,8 @@
             {% endif %}
             <div class="row justify-content-center pb-3">
                 <div class="col-md-10 heading-section text-center ftco-animate">
-                    <span class="subheading">Kontaktieren Sie uns</span>
-                    <h2 class="mb-4">Treten Sie mit uns in Verbindung</h2>
+                    <span class="subheading">Contact</span>
+                    <h2 class="mb-4">Neem contact met me op</h2>
                 </div>
             </div>
             <div class="row py-5">
@@ -60,41 +60,40 @@
                     <form class="message-form" action="{% url 'contact:contact' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <label for="name">Ihr Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required>
+                            <label for="name">Je naam</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Vul je naam in" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Ihre E-Mail</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Geben Sie Ihre E-Mail ein" required>
+                            <label for="email">Je e-mailadres</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Vul je e-mailadres in" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Ihr Telefon</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Geben Sie Ihre Telefonnummer ein" required>
+                            <label for="phone">Je telefoonnummer</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Vul je telefoonnummer in" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Nachricht</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Geben Sie Ihre Nachricht ein" required></textarea>
+                            <label for="message">Bericht</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Schrijf je bericht" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary rounded-pill">Nachricht senden</button>
+                        <button type="submit" class="btn btn-primary rounded-pill">Verstuur bericht</button>
                     </form>
                 </div>
                 <div class="col-lg-4">
                     <div class="owner-info">
                         <h1 class="logo">
-                            <a href="#"><span class=""></span>{{salon_data.owner.name}}</a>
+                            <a href="#"><span class=""></span>Yuri Radomisli</a>
                         </h1>
-                        <p class="icon icon-map-marker"> Adresse: {{ owner.address }}</p>
-                        <p class="icon icon-envelope"> E-Mail: {{ owner.email }}</p>
-                        <p class="icon icon-phone"> Telefon: {{ owner.phone }}</p>
-                        <p class="icon icon-clock-o"> Öffnungszeiten: {{ owner.work_days }} von {{ salon_data.owner.opening_time|time:'H:i' }} bis {{ salon_data.owner.closing_time|time:'H:i' }} Sonntag: Geschloßen</p>
-                        <p class="icon icon-link"> Webseite: <a href="{{ owner.website }}" target="_blank">{{ owner.website }}</a></p>
-                        <img src="{{salon_data.owner.logo.url}}" alt="{{salon_data.owner.name }}">
+                        <p class="icon icon-map-marker"> Adres: {{ owner.address }}</p>
+                        <p class="icon icon-envelope"> E-mail: {{ owner.email }}</p>
+                        <p class="icon icon-phone"> Telefoon: {{ owner.phone }}</p>
+                        <p class="icon icon-clock-o"> Openingstijden: {{ owner.work_days }} van {{ salon_data.owner.opening_time|time:'H:i' }} tot {{ salon_data.owner.closing_time|time:'H:i' }} Zondag: gesloten</p>
+                        <p class="icon icon-link"> Website: <a href="https://radomisli.nl" target="_blank">radomisli.nl</a></p>
+                        <img src="{{salon_data.owner.logo.url}}" alt="Yuri Radomisli">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <script>
         window.onload = function() {

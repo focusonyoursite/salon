@@ -49,3 +49,12 @@
 .btn-add .btn-text {
     color: gold;
 }
+
+.ftco-nav {
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.show {
+  height: auto !important;
+}
